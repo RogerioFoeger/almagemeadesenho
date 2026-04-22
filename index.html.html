@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- ================================================ -->
+    <!-- META TAGS Y OPTIMIZACIÓN CORE WEB VITALS        -->
+    <!-- ================================================ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mestra Helena • Artista Espiritual • Descubre el rostro exacto de tu alma gemela con dibujos canalizados. ¡Única oportunidad a mitad de precio!">
@@ -9,18 +12,23 @@
     <meta name="robots" content="index, follow">
     <title>Mestra Helena • Artista Espiritual • Alma Gemela</title>
     
-    <link rel="preload" as="image" href="https://i.postimg.cc/g2QhqznR/LOGO-MESTRA-HELENA-removebg-preview.png" fetchpriority="high">
+    <!-- PRELOAD DE IMÁGENES CRÍTICAS (Core Web Vitals) -->
+    <link rel="preload" as="image" href="https://i.postimg.cc/VksKcMpM/LOGO-MESTRA-HELENA.png" fetchpriority="high">
     <link rel="preload" as="image" href="https://i.postimg.cc/pr86pHJT/IMAGEM-1.png" fetchpriority="high">
-    <link rel="preload" as="image" href="https://i.postimg.cc/0Qh4kQDN/IMAGEM-2.png" fetchpriority="high">
+    <link rel="preload" as="image" href="https://i.postimg.cc/qv2wmJF0/IMAGEM-2.png" fetchpriority="high">
     
+    <!-- PRECONNECT A CDNs -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
+    <!-- GOOGLE FONTS: Playfair Display (títulos) + Inter (cuerpo) -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
     
+    <!-- FONT AWESOME 6.5.1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
+    <!-- TAILWIND CSS VIA CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
@@ -77,6 +85,9 @@
     </style>
     
     <script>
+        // ================================================
+        // TAILWIND CONFIGURACIÓN (fuentes + colores premium)
+        // ================================================
         function initializeTailwind() {
             return {
                 config(userConfig = {}) {
@@ -105,6 +116,7 @@
             }
         }
         
+        // Inicializar Tailwind al cargar
         document.addEventListener('DOMContentLoaded', () => {
             const config = initializeTailwind().config()
             document.documentElement.setAttribute('data-tailwind-config', JSON.stringify(config))
@@ -113,7 +125,9 @@
     </script>
 </head>
 <body class="tailwind-ready antialiased">
-    <!-- // *Aqui fica a barra superior com a promoção/urgência*// -->
+    <!-- ================================================ -->
+    <!-- 1. TOP BAR - GRADIENTE ROXO/ROSA                -->
+    <!-- ================================================ -->
     <div class="top-bar text-white py-3 text-center text-sm md:text-base font-medium flex items-center justify-center gap-2 shadow-md sticky top-0 z-50">
         <i class="fa-solid fa-sparkles text-lg"></i>
         <span class="uppercase tracking-widest">🔮 ¡ÚLTIMA OPORTUNIDAD! Obtén el rostro de tu alma gemela a mitad de precio.</span>
@@ -123,6 +137,10 @@
             ¡48 HORAS SOLO!
         </div>
     </div>
+
+    <!-- ================================================ -->
+    <!-- 2. BARRA AZUL - CANALIZACIÓN OFICIAL             -->
+    <!-- ================================================ -->
     <div class="bg-[#00a3ff] text-white py-2.5 text-center text-sm font-semibold flex items-center justify-center gap-3 shadow-inner">
         <i class="fa-solid fa-circle-check text-xl"></i>
         ¡CANALIZACIÓN OFICIAL DE MESTRA HELENA! 
@@ -132,12 +150,15 @@
             VERIFICADO
         </div>
     </div>
-    <!-- // *Aqui fica o header com o logo (clicável -> abre o formulário)*// -->
+
+    <!-- ================================================ -->
+    <!-- 3. HEADER - LOGO GRANDE CENTRALIZADO             -->
+    <!-- ================================================ -->
     <header class="bg-white border-b shadow-sm py-5 sticky top-[53px] z-40">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-center">
             <a href="#" onclick="openFormModal()" class="flex flex-col items-center">
                 <img 
-                    src="https://i.postimg.cc/g2QhqznR/LOGO-MESTRA-HELENA-removebg-preview.png" 
+                    src="https://i.postimg.cc/x1L5sf44/Logo-com-cor-fundo-transparente.png" 
                     alt="Logo Mestra Helena • Artista Espiritual"
                     width="420"
                     height="140"
@@ -148,20 +169,25 @@
             </a>
         </div>
     </header>
-    <!-- // *Seção HERO: imagem principal e CTA. Aqui fica a foto grande com a canalização*// -->
+
+    <!-- ================================================ -->
+    <!-- 4. HERO SECTION                                 -->
+    <!-- ================================================ -->
     <section class="hero-bg text-white">
         <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- Imagen izquierda -->
             <div class="relative flex justify-center md:justify-end">
                 <div class="relative">
-                    <!-- // *Imagem principal (IMAGEM-1) - foto da canalização*// -->
                     <img 
-                        src="https://i.postimg.cc/pr86pHJT/IMAGEM-1.png" 
+                        src="https://i.postimg.cc/VN1R2yyY/(Imagem-trabalhos)-numero-1.png" 
                         alt="Mestra Helena canalizando el rostro de tu alma gemela"
                         width="620"
                         height="620"
                         class="w-full max-w-[520px] md:max-w-none rounded-3xl shadow-2xl ring-8 ring-white/30"
                         loading="eager"
                         fetchpriority="high">
+                    <!-- Badge flotante -->
                     <div class="absolute -top-4 -right-4 bg-white text-[#8b00ff] text-sm font-bold px-6 py-2 rounded-2xl shadow-xl flex items-center gap-2 rotate-12">
                         <i class="fa-solid fa-heart-pulse"></i>
                         100% CANALIZADO
@@ -169,6 +195,7 @@
                 </div>
             </div>
             
+            <!-- Texto derecho -->
             <div class="flex flex-col justify-center">
                 <h1 class="heading-font text-4xl md:text-6xl font-semibold leading-none mb-6">
                     ¿Quién es el gran amor<br>que el destino tiene para ti?
@@ -177,7 +204,7 @@
                     Dejaré que mis visiones revelen el rostro exacto de tu alma gemela.
                 </p>
                 
-                <!-- // *Contador: mostra número de pessoas atendidas (animado por JS)*// -->
+                <!-- Contador -->
                 <div class="bg-white/10 backdrop-blur-lg border border-white/30 rounded-3xl p-6 mb-8 inline-flex items-center gap-8 w-fit">
                     <div>
                         <div id="counter" class="text-5xl font-bold text-white counter">3753</div>
@@ -190,7 +217,7 @@
                     </div>
                 </div>
                 
-                <!-- // *Botão CTA: abre o modal do formulário para começar o pedido*// -->
+                <!-- Botón CTA principal -->
                 <button onclick="openFormModal()" 
                         class="bg-[#ff0033] hover:bg-[#cc0028] text-white text-xl md:text-2xl font-semibold py-5 px-12 rounded-3xl shadow-2xl flex items-center justify-center gap-4 group w-full md:w-auto">
                     SÍ, QUIERO EL DIBUJO DE MI ALMA GEMELA
@@ -214,10 +241,13 @@
             </div>
         </div>
     </section>
-    <!-- // *Aqui fica a imagem grande secundária (IMAGEM-2) - logo/banner*// -->
+
+    <!-- ================================================ -->
+    <!-- 5. IMAGEN 2 (debajo del hero)                   -->
+    <!-- ================================================ -->
     <div class="max-w-5xl mx-auto px-6 py-12 flex justify-center">
         <img 
-            src="https://i.postimg.cc/0Qh4kQDN/IMAGEM-2.png" 
+            src="https://i.postimg.cc/qv2wmJF0/IMAGEM-2.png" 
             alt="Mestra Helena • Logo espiritual"
             width="920"
             height="280"
@@ -225,7 +255,10 @@
             loading="lazy"
             decoding="async">
     </div>
-    <!-- // *Sección TESTIMONIOS: galería de testimonios (imágenes)*// -->
+
+    <!-- ================================================ -->
+    <!-- 6. 4 DEPOIMENTOS DEL ZAP (GRID RESPONSIVO)      -->
+    <!-- ================================================ -->
     <section class="max-w-7xl mx-auto px-6 py-16 bg-gray-50">
         <div class="text-center mb-12">
             <span class="bg-[#8b00ff] text-white text-xs font-bold px-5 py-2 rounded-3xl">TESTIMONIOS REALES</span>
@@ -233,22 +266,25 @@
         </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Depoimento 1 -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                <!-- // *Testimonio 1 - imagen WhatsApp*// -->
                 <img src="https://i.postimg.cc/xd6FBqqv/692961ff0ff7762f79f6a78a.png" 
                      alt="Testimonio WhatsApp Mestra Helena 1"
                      width="420" height="680" class="w-full h-auto" loading="lazy" decoding="async">
             </div>
+            <!-- Depoimento 2 -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                 <img src="https://i.postimg.cc/GpXS699G/692961ff0ff77680e8f6a78b.png" 
                      alt="Testimonio WhatsApp Mestra Helena 2"
                      width="420" height="680" class="w-full h-auto" loading="lazy" decoding="async">
             </div>
+            <!-- Depoimento 3 -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                 <img src="https://i.postimg.cc/MG6Fs1Z5/692961ffbc52fe56e4f3cbf4.png" 
                      alt="Testimonio WhatsApp Mestra Helena 3"
                      width="420" height="680" class="w-full h-auto" loading="lazy" decoding="async">
             </div>
+            <!-- Depoimento 4 -->
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
                 <img src="https://i.postimg.cc/QMfnvVVk/692961ffbc52fe8fdbf3cbf5.png" 
                      alt="Testimonio WhatsApp Mestra Helena 4"
@@ -257,7 +293,9 @@
         </div>
     </section>
 
-    <!-- // *Sección MIS TRABAJOS: galería de trabajos canalizados (pequeñas imágenes)*// -->
+    <!-- ================================================ -->
+    <!-- 7. EJEMPLOS DE TRABAJOS                         -->
+    <!-- ================================================ -->
     <section class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
             <span class="bg-[#ff1493] text-white text-xs font-bold px-5 py-2 rounded-3xl">MIS TRABAJOS</span>
@@ -267,7 +305,6 @@
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div class="group">
-                <!-- // *Trabajo 1 - imagen del dibujo canalizado*// -->
                 <div class="overflow-hidden rounded-3xl shadow-lg">
                     <img src="https://i.postimg.cc/LsC7Wvs2/(Imagem-trabalhos)-numero-1.png" 
                          alt="Ejemplo de trabajo 1 - Alma gemela"
@@ -302,9 +339,11 @@
         </div>
     </section>
 
-    <!-- // *Sección FAQ: preguntas frecuentes*// -->
+    <!-- ================================================ -->
+    <!-- 8. FAQ - PREGUNTAS FRECUENTES                   -->
+    <!-- ================================================ -->
     <section id="faq" class="max-w-7xl mx-auto px-6 py-16 bg-[#f8f1ff]">
-     
+        <!-- Botón rojo antes del FAQ -->
         <div class="flex justify-center mb-12">
             <button onclick="openFormModal()" 
                     class="bg-[#ff0033] hover:bg-[#cc0028] text-white text-xl font-semibold py-6 px-14 rounded-3xl shadow-2xl flex items-center justify-center gap-4 text-center">
@@ -318,8 +357,10 @@
             <p class="text-gray-600 mt-3">Todo lo que necesitas saber sobre tu dibujo canalizado de alma gemela</p>
         </div>
         
+        <!-- Accordion FAQ -->
         <div class="max-w-3xl mx-auto space-y-4">
             
+            <!-- Pregunta 1 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Qué es exactamente el dibujo de mi alma gemela y cómo lo canalizas?</span>
@@ -330,6 +371,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 2 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Cuánto tiempo tarda en llegar mi dibujo una vez que realizo el pago?</span>
@@ -340,6 +382,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 3 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Es necesario que yo envíe fotos o información personal para el dibujo?</span>
@@ -350,6 +393,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 4 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Qué pasa si no me gusta el dibujo o no me identifico con la persona?</span>
@@ -360,6 +404,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 5 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Es seguro realizar el pago y compartir mis datos personales?</span>
@@ -370,6 +415,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 6 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Por qué el precio está a mitad de precio en este momento?</span>
@@ -380,6 +426,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 7 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Puedo compartir mi dibujo con amigos o publicarlo en redes?</span>
@@ -390,6 +437,7 @@
                 </div>
             </div>
             
+            <!-- Pregunta 8 -->
             <div class="faq-item bg-white rounded-3xl shadow-md overflow-hidden">
                 <button onclick="toggleAccordion(this)" class="faq-question w-full px-8 py-6 text-left flex justify-between items-center text-lg font-medium">
                     <span>¿Qué diferencia hay entre Mestra Helena y otros artistas espirituales?</span>
@@ -401,6 +449,7 @@
             </div>
         </div>
         
+        <!-- Botón rojo después del FAQ -->
         <div class="flex justify-center mt-16">
             <button onclick="openFormModal()" 
                     class="bg-[#ff0033] hover:bg-[#cc0028] text-white text-xl font-semibold py-6 px-14 rounded-3xl shadow-2xl flex items-center justify-center gap-4 text-center">
@@ -408,15 +457,18 @@
                 SÍ, QUIERO EL DIBUJO DE MI ALMA GEMELA AHORA
             </button>
         </div>
-        </section>
+    </section>
 
-        <!-- // *Modal de formulario: aquí el usuario responde para que yo haga el dibujo*// -->
-        <div id="formModal" onclick="if(event.target.id === 'formModal') closeFormModal()" 
-            class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center px-4">
+    <!-- ================================================ -->
+    <!-- MODAL DEL FORMULARIO (100% idéntico al print)   -->
+    <!-- ================================================ -->
+    <div id="formModal" onclick="if(event.target.id === 'formModal') closeFormModal()" 
+         class="hidden fixed inset-0 bg-black/70 z-[9999] flex items-center justify-center px-4">
         
         <div onclick="event.stopImmediatePropagation()" 
              class="modal bg-white max-w-lg w-full rounded-3xl shadow-2xl overflow-hidden">
             
+            <!-- Barra verde superior -->
             <div class="bg-[#00c853] text-white px-6 py-3 flex items-center justify-between text-sm font-semibold">
                 <div class="flex items-center">
                     <i class="fa-solid fa-check-circle mr-2"></i>
@@ -433,9 +485,9 @@
                     Responde algunas preguntas simples<br>para que pueda dibujar a tu alma gemela
                 </h3>
                 
-                <!-- // *Formulario (`#soulmateForm`) - recopila preferencias y datos del cliente*// -->
                 <form id="soulmateForm" onsubmit="handleFormSubmit(event)" class="space-y-8">
                     
+                    <!-- Pregunta 1 -->
                     <div>
                         <label class="block text-sm font-semibold mb-2">¿Quién te interesa? <span class="text-red-500">*</span></label>
                         <div class="grid grid-cols-3 gap-3">
@@ -454,38 +506,41 @@
                         </div>
                     </div>
                     
+                    <!-- Rango de edad -->
                     <div>
                         <label class="block text-sm font-semibold mb-2">Selecciona tu rango de edad <span class="text-red-500">*</span></label>
                         <select name="edad" class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-base focus:outline-none focus:border-[#8b00ff]" required>
-                            <option value="" selected>Elige una opción...</option>
+                            <option value="">Elige una opción...</option>
                             <option value="18-25">18 - 25 años</option>
                             <option value="26-35">26 - 35 años</option>
-                            <option value="36-45">36 - 45 años</option>
+                            <option value="36-45" selected>36 - 45 años</option>
                             <option value="46-55">46 - 55 años</option>
+                            <option value="56+">56 años o más</option>
                         </select>
                     </div>
                     
+                    <!-- Origen étnico -->
                     <div>
                         <label class="block text-sm font-semibold mb-2">Elige el origen étnico de tu preferencia para tu dibujo <span class="text-red-500">*</span></label>
                         <select name="origen" class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-base focus:outline-none focus:border-[#8b00ff]" required>
-                            <option value=""selected>Elige una opción...</option>
+                            <option value="">Elige una opción...</option>
                             <option value="latino">Latino / Hispano</option>
                             <option value="europeo">Europeo / Caucásico</option>
                             <option value="africano">Africano / Afrodescendiente</option>
                             <option value="asiatico">Asiático</option>
-                            <option value="americano">Americano</option>
-                            <option value="mixto" >Mixto / Cualquier etnia</option>
+                            <option value="mixto" selected>Mixto / Cualquier etnia</option>
                         </select>
                     </div>
                     
+                    <!-- Signo astrológico -->
                     <div>
                         <label class="block text-sm font-semibold mb-2">¿Cuál es tu signo astrológico? <span class="text-red-500">*</span></label>
                         <select name="signo" class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-base focus:outline-none focus:border-[#8b00ff]" required>
-                            <option value="" selected>Elige tu signo...</option>
+                            <option value="">Elige tu signo...</option>
                             <option value="Aries">Aries</option>
                             <option value="Tauro">Tauro</option>
                             <option value="Géminis">Géminis</option>
-                            <option value="Cáncer">Cáncer</option>
+                            <option value="Cáncer" selected>Cáncer</option>
                             <option value="Leo">Leo</option>
                             <option value="Virgo">Virgo</option>
                             <option value="Libra">Libra</option>
@@ -496,18 +551,22 @@
                             <option value="Piscis">Piscis</option>
                         </select>
                     </div>
-                 
+                    
+                    <!-- Nombre -->
+                    <div>
                         <label class="block text-sm font-semibold mb-2">¿Cuál es tu nombre? <span class="text-red-500">*</span></label>
                         <input type="text" name="nombre" placeholder="Escribe tu nombre completo" 
                                class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-base focus:outline-none focus:border-[#8b00ff]" required>
                     </div>
-
+                    
+                    <!-- Correo -->
                     <div>
                         <label class="block text-sm font-semibold mb-2">¿A qué correo debo enviar tu dibujo? <span class="text-red-500">*</span></label>
                         <input type="email" name="email" placeholder="tu@email.com" 
                                class="w-full border border-gray-300 rounded-2xl px-5 py-4 text-base focus:outline-none focus:border-[#8b00ff]" required>
                     </div>
-
+                    
+                    <!-- Botón final del modal -->
                     <button type="submit"
                             class="w-full bg-[#ff0033] hover:bg-[#cc0028] text-white text-2xl font-bold py-7 rounded-3xl shadow-2xl flex items-center justify-center gap-3 mt-4">
                         COMENZAR A DIBUJAR MI ALMA GEMELA
@@ -518,7 +577,8 @@
                         <i class="fa-solid fa-plug-circle-bolt"></i>
                         Ahora voy a conectarme con tu energía
                     </p>
-
+                    
+                    <!-- Bloque importante con candado -->
                     <div class="bg-[#fff8e1] border border-[#ffcc00] rounded-2xl p-5 text-xs leading-relaxed flex gap-3">
                         <i class="fa-solid fa-lock text-[#ffcc00] text-xl mt-px"></i>
                         <div>
@@ -528,11 +588,13 @@
                 </form>
             </div>
         </div>
-        </div>
+    </div>
 
-        <!-- // *Modal legal: muestra política, términos y descargo*// -->
-        <div id="legalModal" onclick="if(event.target.id === 'legalModal') closeLegalModal()" 
-            class="hidden fixed inset-0 bg-black/70 z-[10000] flex items-center justify-center p-4">
+    <!-- ================================================ -->
+    <!-- MODALES LEGALES (3 en uno con JS)               -->
+    <!-- ================================================ -->
+    <div id="legalModal" onclick="if(event.target.id === 'legalModal') closeLegalModal()" 
+         class="hidden fixed inset-0 bg-black/70 z-[10000] flex items-center justify-center p-4">
         
         <div onclick="event.stopImmediatePropagation()" 
              class="modal bg-white w-full max-w-3xl max-h-[90vh] overflow-hidden rounded-3xl shadow-2xl flex flex-col">
@@ -543,7 +605,7 @@
             </div>
             
             <div id="legalContent" class="p-8 overflow-auto text-sm leading-relaxed flex-1 prose">
-             
+                <!-- Contenido dinámico via JS -->
             </div>
             
             <div class="px-8 py-6 border-t text-xs text-gray-500 flex justify-between items-center">
@@ -553,10 +615,14 @@
         </div>
     </div>
 
+    <!-- ================================================ -->
+    <!-- 9. FOOTER                                        -->
+    <!-- ================================================ -->
     <footer class="bg-[#1a0033] text-white py-12">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
+                
+                <!-- Columna 1: Links -->
                 <div>
                     <p class="text-[#ff1493] text-xs font-bold mb-4 tracking-widest">INFORMACIÓN LEGAL</p>
                     <div class="flex flex-col gap-3 text-sm">
@@ -565,9 +631,10 @@
                         <a onclick="showLegalModal('descargo')" class="hover:text-[#ff1493] cursor-pointer">Testimonios - Descargo de responsabilidad</a>
                     </div>
                 </div>
-     
+                
+                <!-- Columna 2: Logo + Pagos -->
                 <div class="flex flex-col items-center text-center">
-                    <img src="https://i.postimg.cc/g2QhqznR/LOGO-MESTRA-HELENA-removebg-preview.png" 
+                    <img src="https://i.postimg.cc/yYgvZXh2/Logo-branca-fundo-transparente.png" 
                          alt="Mestra Helena" width="240" height="80" class="mb-6 opacity-90">
                     <div class="flex items-center gap-6 text-4xl">
                         <i class="fa-brands fa-cc-visa"></i>
@@ -577,6 +644,7 @@
                     <p class="text-xs mt-4 text-white/60">Pago 100% seguro • Encriptación SSL</p>
                 </div>
                 
+                <!-- Columna 3: Descargo -->
                 <div class="text-xs leading-relaxed text-white/70">
                     <p>Copyright 2026 anavelasco.com - Todos los derechos reservados.</p>
                     <p class="mt-4">Descargo de responsabilidad 1: Este sitio ofrece servicios de canalización espiritual y arte intuitivo. Los resultados no están garantizados y dependen de factores personales.</p>
@@ -587,15 +655,16 @@
             <div class="text-center text-[10px] text-white/30 mt-16">
                 MESTRA HELENA • ARTISTA ESPIRITUAL • ALMA GEMELA • 2026
             </div>
-            </div>
-            </footer>
+        </div>
+    </footer>
 
-
-            <!-- // *Footer: información legal y marca*// -->
-            <script>
-
-        // *Eu: Função que anima o contador na página*//
-        // *Explicação: Incrementa o número mostrado no elemento `#counter` até o alvo.*//
+    <!-- ================================================ -->
+    <!-- SCRIPT PRINCIPAL - INTERACTIVIDAD               -->
+    <!-- ================================================ -->
+    <script>
+        // ================================================
+        // CONTADOR ANIMADO EN HERO
+        // ================================================
         function animateCounter() {
             const counterEl = document.getElementById('counter')
             let count = 3200
@@ -612,30 +681,31 @@
                 counterEl.textContent = count.toLocaleString('es-ES')
             }, 16)
         }
-
-        // *Eu: Abre o modal do formulário*//
-        // *Explicação: Remove a classe `hidden` e mostra o modal; reseta o formulário.*//
+        
+        // ================================================
+        // ABRIR / CERRAR MODAL DEL FORMULARIO
+        // ================================================
         function openFormModal() {
             const modal = document.getElementById('formModal')
             modal.classList.remove('hidden')
             modal.classList.add('flex')
+            // Resetear formulario
             document.getElementById('soulmateForm').reset()
         }
         
-        // *Eu: Fecha o modal do formulário*//
-        // *Explicação: Adiciona `hidden` para esconder o modal.*//
         function closeFormModal() {
             const modal = document.getElementById('formModal')
             modal.classList.add('hidden')
             modal.classList.remove('flex')
         }
-  
-        // *Eu: Trata o envio do formulário*//
-        // *Explicação: Prevén envio, mostra loading no botão e redireciona para Hotmart.*//
+        
+        // ================================================
+        // SUBMIT DEL FORMULARIO → REDIRECCIÓN INSTANTÁNEA
+        // ================================================
         function handleFormSubmit(e) {
             e.preventDefault()
             
-    
+            // Simular breve procesamiento
             const btn = e.target.querySelector('button[type="submit"]')
             const originalText = btn.innerHTML
             btn.innerHTML = `
@@ -646,18 +716,19 @@
             `
             setTimeout(() => {
                 closeFormModal()
-           
-                // *Eu: redireciono o cliente para a página de pagamento (Hotmart).*//
+                // Redirección inmediata al link de pago Hotmart
                 window.location.href = "https://pay.hotmart.com/H105488742H"
             }, 950)
         }
         
-        // *Eu: Alterna as abas do FAQ (acordeão)*//
-        // *Explicação: Abre/fecha o conteúdo FAQ e altera o ícone de seta.*//
+        // ================================================
+        // ACORDIÓN FAQ
+        // ================================================
         function toggleAccordion(button) {
             const content = button.parentElement.querySelector('.accordion-content')
             const icon = button.querySelector('i')
-         
+            
+            // Cerrar todos los demás
             document.querySelectorAll('.accordion-content').forEach(c => {
                 if (c !== content) {
                     c.style.maxHeight = '0'
@@ -677,7 +748,10 @@
                 icon.classList.add('fa-chevron-up')
             }
         }
-    
+        
+        // ================================================
+        // MODALES LEGALES
+        // ================================================
         const legalTexts = {
             privacidad: {
                 title: "Política de Privacidad",
@@ -739,8 +813,6 @@
             }
         }
         
-        // *Eu: Mostra o modal legal com o texto correspondente*//
-        // *Explicação: preenche título e conteúdo e exibe o modal (`#legalModal`).*//
         function showLegalModal(type) {
             const modal = document.getElementById('legalModal')
             const titleEl = document.getElementById('legalTitle')
@@ -755,22 +827,20 @@
             modal.classList.add('flex')
         }
         
-        
-        // *Eu: Fecha o modal legal*//
-        // *Explicação: Esconde `#legalModal` adicionando `hidden`.*//
         function closeLegalModal() {
             const modal = document.getElementById('legalModal')
             modal.classList.add('hidden')
             modal.classList.remove('flex')
         }
-
-        // *Eu: Código executado ao carregar a página*//
-        // *Explicação: Inicializa contador e adiciona handler para tecla ESC (fecha modais).*//
+        
+        // ================================================
+        // INICIALIZACIÓN COMPLETA AL CARGAR LA PÁGINA
+        // ================================================
         window.onload = function () {
             console.log('%c✅ HTML completo de Mestra Helena cargado correctamente (más de 750 líneas)', 'color:#8b00ff; font-family:monospace; font-size:10px')
             animateCounter()
             
-           
+            // Keyboard ESC para cerrar modales
             document.addEventListener('keydown', function(e) {
                 if (e.key === "Escape") {
                     const formModal = document.getElementById('formModal')
@@ -779,6 +849,8 @@
                     if (legalModal && legalModal.classList.contains('flex')) closeLegalModal()
                 }
             })
+            
+            console.log('📍 Optimizado para Core Web Vitals • 100% responsivo • Idioma español completo')
         }
     </script>
 </body>
