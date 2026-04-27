@@ -453,5 +453,20 @@
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkoutLinks = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+      const currentParams = new URLSearchParams(window.location.search);
+
+      checkoutLinks.forEach(function (link) {
+        const url = new URL(link.href);
+        currentParams.forEach(function (value, key) {
+          if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        link.href = url.toString();
+      });
+    });
+  </script>
 </body>
 </html>
