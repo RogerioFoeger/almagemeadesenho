@@ -778,7 +778,7 @@
 
   <header class="topo">
     <div class="container">
-      <a href="model.html" aria-label="Ir al formulario">
+      <a href="quiz.html" aria-label="Ir al formulario">
         <img class="logo-principal" src="https://i.postimg.cc/x1L5sf44/Logo-com-cor-fundo-transparente.png" alt="Logo Maestra Helena" width="420" height="140" loading="eager" fetchpriority="high" />
       </a>
     </div>
@@ -1001,10 +1001,19 @@
       }, 16);
     }
 
-    const MODEL_PAGE_URL = "model.html";
+    const MODEL_PAGE_URL = "quiz.html";
+
+    function buildNextUrl(path) {
+      const url = new URL(path, window.location.href);
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach((value, key) => {
+        if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    }
 
     function goToModelPage() {
-      window.location.href = MODEL_PAGE_URL;
+      window.location.href = buildNextUrl(MODEL_PAGE_URL);
     }
 
     function toggleAccordion(button) {
@@ -1114,6 +1123,17 @@
         }
       });
     };
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href="quiz.html"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.location.href = buildNextUrl('quiz.html');
+        });
+      });
+    });
   </script>
 </body>
 </html>
