@@ -18,26 +18,27 @@
   </script>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#e43b2c" />
   <title>Maestra Helena • Quiz Alma Gemela</title>
   <meta name="description" content="Responde el quiz para que Maestra Helena pueda canalizar el dibujo de tu alma gemela." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --primary: #8b00ff;
-      --accent: #ff1493;
-      --spiritual: #5e00b8;
-      --danger: #ff0033;
-      --green: #00c853;
-      --blue: #00a3ff;
-      --cream: #fff8e1;
-      --gold: #ffcc00;
-      --text: #15121d;
+      --vermelho: #e43b2c;
+      --vermelho-escuro: #c92f22;
+      --verde: #196745;
+      --azul: #0052cc;
+      --preto: #121212;
+      --cinza: #f5f5f5;
+      --cinza-2: #f8f9fa;
+      --texto: #2f2f2f;
+      --branco: #ffffff;
+      --sombra: 0 12px 30px rgba(0, 0, 0, 0.10);
+      --sombra-forte: 0 18px 44px rgba(0, 0, 0, 0.16);
+      --radius: 18px;
+      --container: 980px;
     }
 
     * {
@@ -46,125 +47,156 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       min-height: 100vh;
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(255, 20, 147, .22), transparent 34%),
-        radial-gradient(circle at bottom right, rgba(139, 0, 255, .28), transparent 36%),
-        linear-gradient(135deg, #5e00b8, #ff00aa);
-      padding: 0;
+      margin: 0;
+      color: var(--texto);
+      background: var(--branco);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .heading-font {
-      font-family: 'Playfair Display', serif;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .verify-bar {
-      background: var(--blue);
+    strong {
+      font-weight: 900;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin-inline: auto;
+    }
+
+    .official-bar {
+      background: var(--azul);
       color: #fff;
       padding: 10px 14px;
       text-align: center;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
+      letter-spacing: .2px;
     }
 
-    .page {
-      width: 100%;
-      max-width: 980px;
+    .topo {
+      padding: 14px 0;
+      background: #fff;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .logo-principal {
+      width: 170px;
+      max-width: 48vw;
       margin: 0 auto;
-      padding: 22px 12px 34px;
     }
 
-    .logo-wrap {
-      display: flex;
-      justify-content: center;
-      padding: 18px 0 14px;
-    }
-
-    .logo-wrap img {
-      width: min(360px, 86vw);
-      height: auto;
-      filter: drop-shadow(0 12px 26px rgba(0, 0, 0, .23));
+    .hero {
+      background: var(--cinza);
+      padding: 30px 0 42px;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 1fr 440px;
-      gap: 24px;
+      grid-template-columns: minmax(0, 1fr) 430px;
+      gap: 26px;
       align-items: center;
     }
 
     .copy-card {
-      color: #fff;
-      padding: 20px 10px;
+      text-align: left;
+      padding: 22px 0;
     }
 
-    .copy-card h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: .96;
+    .headline {
+      margin: 0 0 14px;
+      color: #000;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(32px, 5.8vw, 56px);
+      line-height: 1.05;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .alerta {
+      max-width: 590px;
+      margin: 0 0 20px;
+      color: var(--vermelho);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(17px, 3.4vw, 22px);
+      line-height: 1.35;
       font-weight: 700;
-      margin-bottom: 18px;
-      text-shadow: 0 8px 28px rgba(0, 0, 0, .22);
     }
 
-    .copy-card p {
-      font-size: 17px;
-      line-height: 1.5;
-      color: rgba(255, 255, 255, .9);
-      max-width: 560px;
+    .descricao {
+      max-width: 580px;
+      margin: 0;
+      color: #333;
+      font-size: clamp(16px, 2.4vw, 19px);
+      line-height: 1.58;
     }
 
     .mini-proof {
-      margin-top: 22px;
-      display: inline-flex;
+      display: inline-grid;
+      grid-template-columns: auto 1fr;
       align-items: center;
-      gap: 12px;
-      background: rgba(255, 255, 255, .13);
-      border: 1px solid rgba(255, 255, 255, .26);
-      padding: 14px 18px;
-      border-radius: 24px;
-      backdrop-filter: blur(10px);
+      gap: 13px;
+      margin-top: 24px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: var(--sombra);
+      border: 1px solid #eeeeee;
     }
 
-    .mini-proof strong {
-      display: block;
-      font-size: 26px;
-      color: #fff;
+    .mini-proof .numero {
+      color: var(--verde);
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1;
+      font-weight: 900;
     }
 
     .mini-proof span {
-      font-size: 12px;
-      color: rgba(255, 255, 255, .78);
+      display: block;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.35;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .08em;
     }
 
     .quiz-box {
       width: 100%;
       background: #fff;
-      border-radius: 24px;
+      border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 22px 60px rgba(0, 0, 0, .36);
-      border: 1px solid rgba(255, 255, 255, .7);
+      box-shadow: var(--sombra-forte);
+      border: 1px solid #eeeeee;
     }
 
     .progress-head {
-      background: var(--green);
+      background: var(--azul);
       color: #fff;
-      padding: 8px 13px;
+      padding: 12px 14px;
       font-weight: 900;
       font-size: 14px;
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
     }
 
     .progress-wrap {
-      flex: 1;
-      height: 5px;
+      height: 7px;
       background: rgba(255, 255, 255, .35);
       border-radius: 999px;
       overflow: hidden;
@@ -178,98 +210,118 @@
     }
 
     .quiz-content {
-      padding: 14px 14px 16px;
+      padding: 20px 18px 18px;
     }
 
     .subtitle {
-      font-family: 'Playfair Display', serif;
+      margin: 0 auto 16px;
+      color: #000;
+      font-family: Georgia, 'Times New Roman', serif;
       text-align: center;
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 1.15;
-      margin-bottom: 12px;
-      color: #16111d;
+      font-weight: 800;
+      font-size: clamp(18px, 4.3vw, 24px);
+      line-height: 1.18;
     }
 
     .error {
       display: none;
-      margin-bottom: 10px;
-      padding: 10px 12px;
+      margin-bottom: 12px;
+      padding: 12px 14px;
       border-radius: 14px;
-      background: #ffe6ec;
-      color: #b00020;
-      font-size: 13px;
-      font-weight: 800;
+      background: #ffe8e5;
+      color: #a81f16;
+      font-size: 14px;
+      font-weight: 900;
+      border: 1px solid rgba(228, 59, 44, 0.22);
     }
 
     .field-label {
       display: block;
+      margin: 12px 0 7px;
+      color: #000;
+      font-size: 14px;
+      line-height: 1.25;
       font-weight: 900;
-      font-size: 13px;
-      margin: 9px 0 5px;
-      color: #111;
     }
 
     .required {
-      color: var(--danger);
+      color: var(--vermelho);
+    }
+
+    .hint {
+      color: #666;
+      font-size: 12px;
+      font-weight: 700;
+      margin-left: 5px;
     }
 
     .choice-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 5px;
+      gap: 8px;
     }
 
     .choice-row input {
-      display: none;
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .choice-row span {
-      min-height: 42px;
+      min-height: 46px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 6px;
+      padding: 8px 7px;
       font-size: 13px;
-      line-height: 1.05;
-      border: 1px solid #dde1e7;
-      border-radius: 16px;
+      line-height: 1.12;
+      border: 1px solid #dddddd;
+      border-radius: 14px;
       background: #fff;
       color: #111;
       cursor: pointer;
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease, background .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .choice-row span:hover {
+      border-color: var(--azul);
+      box-shadow: 0 8px 18px rgba(0, 82, 204, 0.10);
     }
 
     .choice-row input:checked + span {
-      background: var(--primary);
-      border-color: var(--primary);
+      background: var(--azul);
+      border-color: var(--azul);
       color: #fff;
       font-weight: 900;
-      box-shadow: 0 8px 22px rgba(139, 0, 255, .24);
+      box-shadow: 0 10px 22px rgba(0, 82, 204, 0.20);
     }
 
     select,
     input[type="text"],
     input[type="email"] {
       width: 100%;
-      height: 34px;
-      border: 1px solid #cfd5dd;
-      border-radius: 16px;
-      padding: 0 11px;
-      font-size: 14px;
-      font-family: 'Inter', sans-serif;
+      height: 42px;
+      border: 1px solid #d8d8d8;
+      border-radius: 14px;
+      padding: 0 13px;
+      color: #111;
       background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
       outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
     }
 
     select:focus,
     input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(139, 0, 255, .12);
+      border-color: var(--azul);
+      box-shadow: 0 0 0 3px rgba(0, 82, 204, .12);
     }
 
     input::placeholder {
-      color: #aeb5bf;
+      color: #9a9a9a;
       font-weight: 700;
     }
 
@@ -290,247 +342,345 @@
     }
 
     .submit-btn {
+      display: block;
       width: 100%;
-      min-height: 38px;
-      margin-top: 12px;
+      min-height: 56px;
+      margin: 18px auto 10px;
+      padding: 16px 14px;
       border: 0;
-      border-radius: 999px;
-      background: var(--danger);
+      border-radius: 16px;
       color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      font-weight: 900;
+      background: linear-gradient(180deg, #f05243, var(--vermelho));
+      box-shadow: 0 12px 28px rgba(228, 59, 44, 0.35);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(17px, 4.4vw, 22px);
+      line-height: 1.12;
+      font-weight: 800;
+      text-align: center;
       cursor: pointer;
-      box-shadow: 0 12px 26px rgba(255, 0, 51, .24);
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .submit-btn:hover {
-      background: #cc0028;
+    .submit-btn:hover,
+    .submit-btn:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(228, 59, 44, 0.45);
+      outline: none;
     }
 
     .submit-btn:disabled {
       opacity: .72;
       cursor: not-allowed;
+      transform: none;
     }
 
     .energy {
+      margin: 10px 0 0;
+      color: var(--verde);
       text-align: center;
-      color: var(--green);
+      font-size: 15px;
+      line-height: 1.35;
       font-weight: 900;
-      font-size: 14px;
-      margin: 7px 0 7px;
     }
 
+    .security {
+      margin-top: 10px;
+      text-align: center;
+      color: #666;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
 
-    @media (max-width: 850px) {
-      .page {
-        max-width: 480px;
-        padding-top: 10px;
-      }
+    .secao-azul {
+      background: var(--azul);
+      color: #fff;
+      padding: 28px 0;
+      text-align: center;
+    }
 
+    .secao-azul h2 {
+      margin: 0 0 8px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(22px, 5.6vw, 32px);
+      line-height: 1.14;
+      font-weight: 800;
+    }
+
+    .secao-azul p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 15px;
+      font-weight: 700;
+      opacity: .95;
+    }
+
+    @media (max-width: 900px) {
       .layout {
         grid-template-columns: 1fr;
-        gap: 10px;
+        max-width: 520px;
+        margin-inline: auto;
       }
 
       .copy-card {
         text-align: center;
-        padding: 8px 4px 4px;
+        padding: 8px 0 2px;
       }
 
-      .copy-card h1 {
-        font-size: 34px;
-        margin-bottom: 9px;
-      }
-
-      .copy-card p {
-        font-size: 14px;
-        margin: 0 auto;
+      .descricao {
+        margin-inline: auto;
       }
 
       .mini-proof {
-        margin-top: 12px;
-        padding: 9px 13px;
-      }
-
-      .logo-wrap {
-        padding: 12px 0 6px;
+        grid-template-columns: 1fr;
+        text-align: center;
       }
     }
 
-
-      .choice-row span {
-        font-size: 11.5px;
-        padding: 5px;
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 24px, var(--container));
       }
 
-      .subtitle {
-        font-size: 15px;
+      .official-bar {
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .topo {
+        padding: 10px 0;
+      }
+
+      .logo-principal {
+        width: 145px;
+      }
+
+      .hero {
+        padding: 22px 0 32px;
+      }
+
+      .headline {
+        font-size: clamp(28px, 8.2vw, 36px);
+      }
+
+      .alerta {
+        font-size: 17px;
       }
 
       .quiz-content {
-        padding: 12px 10px 13px;
+        padding: 17px 13px 15px;
       }
-    
+
+      .progress-head {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 7px;
+      }
+
+      .choice-row {
+        grid-template-columns: 1fr;
+      }
+
+      .choice-row span {
+        min-height: 42px;
+        font-size: 14px;
+      }
+
+      .submit-btn {
+        border-radius: 14px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .container {
+        width: min(100% - 18px, var(--container));
+      }
+
+      .field-label,
+      select,
+      input[type="text"],
+      input[type="email"] {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <main class="page">
-    <div class="logo-wrap">
+  <div class="official-bar">✅ ¡Este es mi sitio oficial! ¡Cuidado con las imitaciones!</div>
+
+  <header class="topo">
+    <div class="container">
       <img
+        class="logo-principal"
         src="https://i.postimg.cc/x1L5sf44/Logo-com-cor-fundo-transparente.png"
         alt="Logo Maestra Helena • Artista Espiritual"
         width="420"
         height="140"
+        loading="eager"
       >
     </div>
+  </header>
 
-    <section class="layout">
-      <div class="copy-card">
-        <h1>Responde el quiz para revelar tu alma gemela</h1>
-        <p>
-          Completa las preguntas para que pueda preparar la canalización espiritual de tu dibujo personalizado.
-        </p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="layout">
+          <div class="copy-card">
+            <h1 class="headline">Responde el quiz para revelar tu alma gemela</h1>
+            <p class="alerta"><strong>ATENCIÓN:</strong> Completa las preguntas para iniciar tu canalización espiritual.</p>
+            <p class="descricao">
+              Prepararé la información necesaria para canalizar tu dibujo personalizado y conectar con la energía de la persona que el destino tiene para ti.
+            </p>
 
-        <div class="mini-proof">
-          <div>
-            <strong>3753</strong>
-            <span>personas ya recibieron su dibujo</span>
+            <div class="mini-proof">
+              <div class="numero">3753</div>
+              <span>personas ya recibieron su dibujo</span>
+            </div>
+          </div>
+
+          <div class="quiz-box">
+            <div class="progress-head">
+              <span>Casi terminado...</span>
+              <div class="progress-wrap">
+                <div class="progress"></div>
+              </div>
+              <span>78%</span>
+            </div>
+
+            <div class="quiz-content">
+              <p class="subtitle">
+                Responde algunas preguntas simples para que pueda dibujar a tu alma gemela
+              </p>
+
+              <div id="errorBox" class="error">
+                Completa todos los campos para continuar.
+              </div>
+
+              <form id="quizForm">
+                <label class="field-label">¿Quién te interesa? <span class="required">*</span></label>
+
+                <div class="choice-row">
+                  <label>
+                    <input type="radio" name="interes" value="Me gustan los hombres" required checked>
+                    <span>Me gustan los hombres</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="interes" value="Me gustan las mujeres" required>
+                    <span>Me gustan las mujeres</span>
+                  </label>
+
+                  <label>
+                    <input type="radio" name="interes" value="Me gustan ambos" required>
+                    <span>Me gustan ambos</span>
+                  </label>
+                </div>
+
+                <label class="field-label">Selecciona tu rango de edad <span class="required">*</span></label>
+                <select name="edad" required>
+                  <option value="">Elige una opción...</option>
+                  <option value="18 - 25 años">18 - 25 años</option>
+                  <option value="26 - 35 años">26 - 35 años</option>
+                  <option value="36 - 45 años">36 - 45 años</option>
+                  <option value="46 - 55 años">46 - 55 años</option>
+                  <option value="56+ años">56+ años</option>
+                </select>
+
+                <label class="field-label">Elige el origen étnico de tu preferencia <span class="required">*</span></label>
+                <select name="region" id="regionSelect" required>
+                  <option value="">Elige una región...</option>
+                  <option value="América">América</option>
+                  <option value="Europa">Europa</option>
+                  <option value="África">África</option>
+                  <option value="Asia">Asia</option>
+                  <option value="Oceanía">Oceanía</option>
+                  <option value="Cualquier región">Cualquier región</option>
+                </select>
+
+                <div id="paisBox" class="hidden-field">
+                  <label class="field-label">Elige el país de preferencia <span class="required">*</span></label>
+                  <select name="pais" id="paisSelect">
+                    <option value="">Primero elige una región...</option>
+                  </select>
+                </div>
+
+                <label class="field-label">¿Cuál es tu signo astrológico? <span class="required">*</span></label>
+                <select name="signo" required>
+                  <option value="">Elige tu signo...</option>
+                  <option value="Aries">Aries</option>
+                  <option value="Tauro">Tauro</option>
+                  <option value="Géminis">Géminis</option>
+                  <option value="Cáncer">Cáncer</option>
+                  <option value="Leo">Leo</option>
+                  <option value="Virgo">Virgo</option>
+                  <option value="Libra">Libra</option>
+                  <option value="Escorpio">Escorpio</option>
+                  <option value="Sagitario">Sagitario</option>
+                  <option value="Capricornio">Capricornio</option>
+                  <option value="Acuario">Acuario</option>
+                  <option value="Piscis">Piscis</option>
+                </select>
+
+                <label class="field-label">¿Cuál es tu ascendente?<span class="hint">No lo sé, no hay problema.</span></label>
+                <select name="ascendente">
+                  <option value="">Elige tu ascendente...</option>
+                  <option value="Aries">Aries</option>
+                  <option value="Tauro">Tauro</option>
+                  <option value="Géminis">Géminis</option>
+                  <option value="Cáncer">Cáncer</option>
+                  <option value="Leo">Leo</option>
+                  <option value="Virgo">Virgo</option>
+                  <option value="Libra">Libra</option>
+                  <option value="Escorpio">Escorpio</option>
+                  <option value="Sagitario">Sagitario</option>
+                  <option value="Capricornio">Capricornio</option>
+                  <option value="Acuario">Acuario</option>
+                  <option value="Piscis">Piscis</option>
+                </select>
+
+                <label class="field-label">¿Cuál es tu nombre? <span class="required">*</span></label>
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Escribe tu nombre completo"
+                  required
+                >
+
+                <label class="field-label">¿A qué correo debo enviar tu dibujo? <span class="required">*</span></label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  required
+                >
+
+                <input type="hidden" name="pagina" value="Quiz Alma Gemela - Model Page">
+                <input type="hidden" name="fecha" id="fechaCampo">
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                  COMENZAR A DIBUJAR MI ALMA GEMELA
+                </button>
+
+                <div class="energy">
+                  Ahora voy a conectarme con tu energía
+                </div>
+
+                <div class="security">
+                  Tus datos serán usados solamente para preparar tu dibujo.
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="quiz-box">
-        <div class="progress-head">
-          <span>Casi terminado...</span>
-          <div class="progress-wrap">
-            <div class="progress"></div>
-          </div>
-          <span>78%</span>
-        </div>
-
-        <div class="quiz-content">
-          <p class="subtitle">
-            Responde algunas preguntas simples para que pueda dibujar a tu alma gemela
-          </p>
-
-          <div id="errorBox" class="error">
-            Completa todos los campos para continuar.
-          </div>
-
-          <form id="quizForm">
-            <label class="field-label">¿Quién te interesa? <span class="required">*</span></label>
-
-            <div class="choice-row">
-              <label>
-                <input type="radio" name="interes" value="Me gustan los hombres" required checked>
-                <span>Me gustan los hombres</span>
-              </label>
-
-              <label>
-                <input type="radio" name="interes" value="Me gustan las mujeres" required>
-                <span>Me gustan las mujeres</span>
-              </label>
-
-              <label>
-                <input type="radio" name="interes" value="Me gustan ambos" required>
-                <span>Me gustan ambos</span>
-              </label>
-            </div>
-
-            <label class="field-label">Selecciona tu rango de edad <span class="required">*</span></label>
-            <select name="edad" required>
-              <option value="">Elige una opción...</option>
-              <option value="18 - 25 años">18 - 25 años</option>
-              <option value="26 - 35 años">26 - 35 años</option>
-              <option value="36 - 45 años">36 - 45 años</option>
-              <option value="46 - 55 años">46 - 55 años</option>
-              <option value="56+ años">56+ años</option>
-            </select>
-
-            <label class="field-label">Elige el origen étnico de tu preferencia  <span class="required">*</span></label>
-            <select name="region" id="regionSelect" required>
-              <option value="">Elige una región...</option>
-              <option value="América">América</option>
-              <option value="Europa">Europa</option>
-              <option value="África">África</option>
-              <option value="Asia">Asia</option>
-              <option value="Oceanía">Oceanía</option>
-              <option value="Cualquier región">Cualquier región</option>
-            </select>
-
-            <div id="paisBox" class="hidden-field">
-              <label class="field-label">Elige el país de preferencia <span class="required">*</span></label>
-              <select name="pais" id="paisSelect">
-                <option value="">Primero elige una región...</option>
-              </select>
-            </div>
-            
-            <label class="field-label">¿Cuál es tu signo astrológico? <span class="required">*</span></label>
-            <select name="signo" required>
-              <option value="">Elige tu signo...</option>
-              <option value="Aries">Aries</option>
-              <option value="Tauro">Tauro</option>
-              <option value="Géminis">Géminis</option>
-              <option value="Cáncer">Cáncer</option>
-              <option value="Leo">Leo</option>
-              <option value="Virgo">Virgo</option>
-              <option value="Libra">Libra</option>
-              <option value="Escorpio">Escorpio</option>
-              <option value="Sagitario">Sagitario</option>
-              <option value="Capricornio">Capricornio</option>
-              <option value="Acuario">Acuario</option>
-              <option value="Piscis">Piscis</option>
-            </select>
-            <label class="field-label">¿Cuál es tu ascendente?<span style="color: #343434db;">No lo sé, no hay problema.</span></label>
-            
-            <select name="ascendente">
-              <option value="">Elige tu ascendente...</option>
-              <option value="Aries">Aries</option>
-              <option value="Tauro">Tauro</option>
-              <option value="Géminis">Géminis</option>
-              <option value="Cáncer">Cáncer</option>
-              <option value="Leo">Leo</option>
-              <option value="Virgo">Virgo</option>
-              <option value="Libra">Libra</option>
-              <option value="Escorpio">Escorpio</option>
-              <option value="Sagitario">Sagitario</option>
-              <option value="Capricornio">Capricornio</option>
-              <option value="Acuario">Acuario</option>
-              <option value="Piscis">Piscis</option>
-            </select>
-            
-            <label class="field-label">¿Cuál es tu nombre? <span class="required">*</span></label>
-            <input
-              type="text"
-              name="nombre"
-              placeholder="Escribe tu nombre completo"
-              required
-            >
-
-            <label class="field-label">¿A qué correo debo enviar tu dibujo? <span class="required">*</span></label>
-            <input
-              type="email"
-              name="email"
-              placeholder="tu@email.com"
-              required
-            >
-
-            <input type="hidden" name="pagina" value="Quiz Alma Gemela - Model Page">
-            <input type="hidden" name="fecha" id="fechaCampo">
-
-            <button type="submit" class="submit-btn" id="submitBtn">
-              COMENZAR A DIBUJAR MI ALMA GEMELA
-            </button>
-
-            <div class="energy">
-              Ahora voy a conectarme con tu energía
-            </div>
-
-            
-          </form>
-        </div>
+    <section class="secao-azul">
+      <div class="container">
+        <h2>Tu canalización está casi lista</h2>
+        <p>Después de enviar tus respuestas, continuarás al siguiente paso para completar tu solicitud.</p>
       </div>
     </section>
   </main>
