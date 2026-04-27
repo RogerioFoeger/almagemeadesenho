@@ -689,7 +689,17 @@
     const SHEETMONKEY_URL = "https://api.sheetmonkey.io/form/xwYmFBpwSzRhivkPWEZsgr";
 
     // Página aberta depois de enviar os dados para a planilha.
-    const NEXT_PAGE_URL = "not";
+    const NEXT_PAGE_URL = "pagina3.html";
+
+    function buildNextUrl(path) {
+      const url = new URL(path, window.location.href);
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach((value, key) => {
+        if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    }
+
 
     const paisesPorRegion = {
       "América": [
@@ -810,7 +820,7 @@
           body: formData
         });
 
-        window.location.href = NEXT_PAGE_URL;
+        window.location.href = buildNextUrl(NEXT_PAGE_URL);
       } catch (error) {
         submitBtn.disabled = false;
         submitBtn.textContent = "COMENZAR A DIBUJAR MI ALMA GEMELA";
