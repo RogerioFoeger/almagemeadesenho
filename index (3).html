@@ -618,6 +618,8 @@
   </style>
 </head>
 <body>
+  <header class="topo">
+    <div class="container">
       <img class="logo-principal" src="https://i.postimg.cc/x1L5sf44/Logo-com-cor-fundo-transparente.png" alt="Logo" loading="eager" />
     </div>
   </header>
@@ -647,7 +649,7 @@
         <p class="preco-normal">Normalmente <del>$74,00</del></p>
         <p class="preco-agora"><span>AHORA SOLO</span> $37,00<span>¡AHORRA 50%!</span></p>
 
-        <a href="site_botao_checkout.html" class="botao-reservar">
+        <a href="pagina4.html" class="botao-reservar">
           <span class="linha1">¡SÍ! QUIERO RESERVAR EL MÍO<br />AHORA</span>
           <span class="linha2">HOY SOLO: QUEDAN SOLO 3 PLAZAS</span>
         </a>
@@ -712,7 +714,7 @@
           <strong>AHORA SOLO $37,00. ¡AHORRA 50%!</strong>
         </div>
 
-        <a href="site_botao_checkout.html" class="botao-reservar">
+        <a href="pagina4.html" class="botao-reservar">
           <span class="linha1">¡SÍ! QUIERO RESERVAR EL MÍO<br />AHORA</span>
           <span class="linha2">HOY SOLO: QUEDAN SOLO 3 PLAZAS</span>
         </a>
@@ -790,7 +792,7 @@
           <span>SOLO $37,00</span>
         </div>
 
-        <a href="site_botao_checkout.html" class="botao-reservar">
+        <a href="pagina4.html" class="botao-reservar">
           <span class="linha1">¡SÍ! QUIERO RESERVAR EL MÍO<br />AHORA</span>
           <span class="linha2">HOY SOLO: QUEDAN SOLO 3 PLAZAS</span>
         </a>
@@ -808,5 +810,25 @@
       <p>Aviso legal: Al participar en mis servicios, reconoces que no soy psicólogo, abogado o profesional de la salud licenciado y que mis servicios no reemplazan los consejos de abogados, psicólogos u otros profesionales de la salud. El tarot y la numerología no deben interpretarse como consejo psicológico, terapia o consejo médico, y no deben sustituir a tu médico. Siempre haré mi mejor esfuerzo para ofrecer resultados precisos y profesionales. Sin embargo, no puedo garantizar los resultados de las lecturas o recomendaciones en mi sitio web y mis comentarios sobre el resultado no son más que expresiones de opinión. No ofrezco ninguna garantía más allá de la entrega de los servicios adquiridos como se describe. Todas mis creaciones y lecturas son únicamente con fines de entretenimiento.</p>
     </div>
   </footer>
+
+  <script>
+    function buildNextUrl(path) {
+      const url = new URL(path, window.location.href);
+      const currentParams = new URLSearchParams(window.location.search);
+      currentParams.forEach((value, key) => {
+        if (!url.searchParams.has(key)) url.searchParams.set(key, value);
+      });
+      return url.toString();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('a[href="pagina4.html"]').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          window.location.href = buildNextUrl('pagina4.html');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
