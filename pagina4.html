@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="robots" content="noindex, nofollow, noarchive">
@@ -95,16 +95,16 @@
       font-weight: 800;
     }
 
-    .bonus-card {
+        .bonus-card {
       position: relative;
       z-index: 2;
-      background: var(--branco);
-      margin: -12px 24px 0;
-      border-radius: var(--radius);
-      padding: 30px 24px 28px;
-      box-shadow: var(--sombra);
+      background: transparent;
+      margin: -12px 10px 0;
+      border-radius: 0;
+      padding: 8px 0 10px;
+      box-shadow: none;
       text-align: center;
-      border: 1px solid #eeeeee;
+      border: 0;
     }
 
     .bonus-card h2 {
@@ -129,13 +129,13 @@
       line-height: 1.2;
     }
 
-    .soul-image {
-      width: min(100%, 380px);
+        .soul-image {
+      width: min(100%, 720px);
       margin: 0 auto;
-      border-radius: var(--radius);
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
-      background: #eeeeee;
-      object-fit: cover;
+      border-radius: 0;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+      background: transparent;
+      object-fit: contain;
     }
 
     .bonuses {
@@ -338,12 +338,10 @@
 
       .header {
         padding: 28px 16px 26px;
-      }
-
-      .bonus-card {
-        margin: -10px 12px 0;
-        padding: 24px 14px 22px;
-        border-radius: 16px;
+      }      .bonus-card {
+        margin: -10px 6px 0;
+        padding: 6px 0 8px;
+        border-radius: 0;
       }
 
       .bonuses {
@@ -374,10 +372,9 @@
 
       .option-1 {
         padding: 18px 14px;
-      }
-
-      .soul-image {
-        border-radius: 16px;
+      }      .soul-image {
+        width: 100%;
+        border-radius: 0;
       }
     }
 
@@ -394,15 +391,8 @@
 </head>
 <body>
   <div class="container">
-    <div class="header">
-      <div class="felicidades">¡Felicidades!!</div>
-      <div class="titulo">¡USTED TIENE DERECHO A RECIBIR<br>BONIFICACIONES GRATUITAS!</div>
-    </div>
-
+   
     <div class="bonus-card">
-      <h2>BONUS DE MISE À JOUR<br>GRATUIT!</h2>
-      <div class="value">VALEUR ~$58,00</div>
-
       <img src="https://i.postimg.cc/9QLPd5Wc/IMAGEM4.png"
            alt="Alma Gemela"
            class="soul-image"
