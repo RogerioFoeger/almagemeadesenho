@@ -288,6 +288,7 @@
     }
 
     .option-2 {
+      display: block;
       width: min(100%, 650px);
       margin: 0 auto 22px;
       padding: 18px;
@@ -296,6 +297,18 @@
       border-radius: 16px;
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
       text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .option-2:hover,
+    .option-2:focus-visible {
+      transform: translateY(-2px);
+      border-color: #dddddd;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+      outline: none;
     }
 
     .option-2 .no-gracias {
@@ -427,15 +440,15 @@
     <div class="options">
       <div class="options-title">Elige la opción que mejor se adapte a ti:</div>
 
-      <a href="https://pay.hotmart.com/H105488742H?bid=1777242396475" class="option-1">
+      <a href="https://pay.hotmart.com/E105585321O" class="option-1">
         <div class="check">✅</div>
         <strong>¡Sí! Quiero mudarme a la Visión Completa de mi Alma Gemela.</strong>
         <div class="small">(Envío de 6 horas + Descripción + Dibujo a color - Solo $19,95 adicional)</div>
       </a>
 
-      <div class="option-2">
+      <a href="https://pay.hotmart.com/H105488742H" class="option-2">
         <div class="no-gracias">No, gracias. Prefiero el envío estándar de 48 horas y renunciar a mis bonificaciones gratuitas (sin coste adicional) - $0,00.</div>
-      </div>
+      </a>
 
       <div class="yellow-btn">
         <strong>Actualmente, mi demanda es: ALTA</strong><br>
