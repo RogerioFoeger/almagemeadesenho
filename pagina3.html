@@ -276,12 +276,26 @@
       box-shadow: var(--sombra);
     }
 
+    .card-testemunho {
+      background: transparent;
+      border-radius: 0;
+      overflow: visible;
+      box-shadow: none;
+    }
+
     .card-testemunho img,
     .card-desenho img {
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
       background: #e8e8e8;
+    }
+
+    .card-testemunho img {
+      aspect-ratio: auto;
+      object-fit: contain;
+      border-radius: 0;
+      background: transparent;
     }
 
     .secao {
@@ -577,6 +591,10 @@
         aspect-ratio: 1 / 1.05;
       }
 
+      .card-testemunho img {
+        aspect-ratio: auto;
+      }
+
       .botao-reservar {
         margin-top: 22px;
         border-radius: 14px;
@@ -721,20 +739,24 @@
 
         <article class="testimonio">
           <div class="testimonio-topo">
-            <img src="testimonio-ana.jpg" alt="Ana López" class="foto" loading="lazy" />
+            <img src="https://i.postimg.cc/52grqng2/FOTO-1.png" alt="Ana López" class="foto" loading="lazy" />
             <div class="estrellas">★★★★★</div>
           </div>
-          <p>«Me quedé impresionada por el dibujo y la descripción detallada de mi futura alma gemela. Los colores eran perfectos. La descripción de mi alma gemela era muy precisa y me dio mucha confianza. ¡Te recomiendo totalmente el servicio! Es una persona muy seria y los resultados son visibles.»</p>
-          <span class="nome">Ana López – Francia</span>
+          <p>Quedé impresionada con el dibujo y la descripción detallada de mi futura alma gemela realizados por la Maestra Helena.
+El dibujo era preciso y los colores eran soberbios. La descripción de mi alma gemela fue muy acertada y me dio la seguridad de que lo reconoceré cuando nos encontremos.
+Recomiendo encarecidamente el servicio de la Maestra Helena a cualquier persona que esté buscando a su alma gemela. Es una herramienta valiosa para encontrar a la pareja ideal.
+Te recomiendo que encargues tu dibujo hoy mismo y des el primer paso para encontrar a tu alma gemela.
+</p>
+          <span class="nome"> Ximena (La Paz, Bolívia)</span>
         </article>
 
         <article class="testimonio">
           <div class="testimonio-topo">
-            <img src="testimonio-katia.jpg" alt="Katia" class="foto" loading="lazy" />
+            <img src="https://i.postimg.cc/52grqngt/FOTO-2.png" alt="Katia" class="foto" loading="lazy" />
             <div class="estrellas">★★★★★</div>
           </div>
           <p>«Me impresionó mucho la calidad del dibujo digital y la descripción detallada de mi futura alma gemela. Era exactamente como la imaginé. La descripción de Théodore era increíble y cada detalle era muy preciso. ¡Recomiendo 100%!»</p>
-          <span class="nome">Katia (Toulouse) – Francia</span>
+          <span class="nome">Lupita (Cidade do México)</span>
         </article>
       </div>
     </section>
